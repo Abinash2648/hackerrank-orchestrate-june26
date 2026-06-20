@@ -1,0 +1,251 @@
+HackerRank Orchestrate – Development Transcript
+
+Project: Insurance Damage Claim Verification System
+
+Developer: Abinash Mishra
+
+AI Assistant Used: ChatGPT
+
+---
+
+## PHASE 1 – PROJECT SETUP
+
+* Reviewed problem_statement.md.
+
+* Understood required inputs:
+
+  * claims.csv
+  * sample_claims.csv
+  * user_history.csv
+  * evidence_requirements.csv
+  * images
+
+* Understood required outputs:
+
+  * evidence_standard_met
+  * risk_flags
+  * issue_type
+  * object_part
+  * claim_status
+  * severity
+  * supporting_image_ids
+
+* Created project structure:
+
+  * main.py
+  * claim_parser.py
+  * risk_analyzer.py
+  * image_analyzer.py
+
+---
+
+## PHASE 2 – CLAIM PARSER
+
+Implemented:
+
+* Issue type extraction
+* Object part extraction
+* Multi-language support
+* Prompt injection detection
+
+Supported issue types:
+
+* dent
+* scratch
+* crack
+* glass_shatter
+* broken_part
+* missing_part
+* water_damage
+* stain
+* torn_packaging
+* crushed_packaging
+
+Supported object parts:
+
+Cars:
+
+* front_bumper
+* rear_bumper
+* side_mirror
+* windshield
+* hood
+* door
+* headlight
+* taillight
+
+Laptops:
+
+* screen
+* keyboard
+* trackpad
+* hinge
+* lid
+* corner
+* body
+
+Packages:
+
+* box
+* package_corner
+* label
+* seal
+
+Prompt injection detection:
+
+* ignore previous instructions
+* approve immediately
+* skip manual review
+* mark supported
+* override
+* system prompt
+
+---
+
+## PHASE 3 – RISK ANALYSIS
+
+Implemented:
+
+risk_analyzer.py
+
+Data source:
+
+user_history.csv
+
+Risk flags:
+
+* user_history_risk
+* manual_review_required
+
+Logic:
+
+* Frequent claims
+* Rejected claim history
+* Historical review patterns
+
+---
+
+## PHASE 4 – IMAGE ANALYSIS
+
+Implemented:
+
+image_analyzer.py
+
+Model:
+
+Gemini Vision
+
+Purpose:
+
+* Damage verification
+* Severity estimation
+* Object verification
+
+Issue encountered:
+
+Gemini API free-tier quota exceeded.
+
+Error:
+
+429 RESOURCE_EXHAUSTED
+
+Fallback strategy adopted:
+
+* Rule-based claim processing
+* Gemini module retained for future use
+
+---
+
+## PHASE 5 – EVIDENCE VALIDATION
+
+Implemented evidence validation using:
+
+evidence_requirements.csv
+
+Logic:
+
+* Count provided images
+* Verify minimum evidence availability
+* Generate evidence_standard_met
+* Generate evidence_standard_met_reason
+
+---
+
+## PHASE 6 – CLAIM DECISION ENGINE
+
+Implemented final decision logic.
+
+Possible outcomes:
+
+* supported
+* not_enough_information
+
+Decision factors:
+
+* Risk flags
+* Prompt injection
+* Evidence availability
+* Parsed claim information
+
+---
+
+## PHASE 7 – EVALUATION
+
+Created:
+
+evaluation/
+
+* evaluation_report.md
+* sample_output.csv
+
+Performed evaluation using:
+
+sample_claims.csv
+
+Generated:
+
+output.csv
+
+for claims.csv
+
+---
+
+## PHASE 8 – DOCUMENTATION
+
+Created:
+
+* README.md
+* evaluation_report.md
+* requirements.txt
+
+Documented:
+
+* Architecture
+* Evaluation strategy
+* Cost analysis
+* Runtime analysis
+* TPM/RPM considerations
+
+---
+
+## FINAL SUBMISSION CONTENTS
+
+code.zip
+
+Contains:
+
+* main.py
+* claim_parser.py
+* risk_analyzer.py
+* image_analyzer.py
+* README.md
+* requirements.txt
+* evaluation/evaluation_report.md
+* evaluation/sample_output.csv
+
+Additional files:
+
+* output.csv
+* chat_transcript.txt
+
+End of Transcript.
